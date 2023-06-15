@@ -1,6 +1,8 @@
+
+
 const addBtn = document.querySelector(".add");
 const addTaskInput = document.querySelector(".addTaskInput");
-const tasks = document.querySelector(".task");
+const task = document.querySelector(".task");
 
 const validFormFieldInput = () => {
 
@@ -9,6 +11,16 @@ const validFormFieldInput = () => {
     if(data == ""){
         alert("Please add the task name")
         return;
-    }
+    }   
 } 
+task.addEventListener("click", function(task) {
+    task.preventDefault()
+})
+
+
 addBtn.addEventListener("click", validFormFieldInput);
+
+const tasksManager = new TaskManager();
+console.log(tasksManager);
+
+
